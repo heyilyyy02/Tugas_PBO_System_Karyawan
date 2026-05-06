@@ -78,7 +78,7 @@ namespace SistemKaryawan
 
         public override void Kerja()
         {
-            Console.WriteLine(nama + " mengelola operasional perusahaan.");
+            Console.WriteLine(Nama + " mengelola operasional perusahaan.");
         }
     }
 
