@@ -30,9 +30,10 @@ namespace SistemKaryawan
     {
         public double Tunjangan { get; set; }
 
-        public Tetap(string Nama, double Gaji, double Tunjangan) : base(Nama, Gaji)
+        public Tetap(string Nama, double Gaji, double Tunjangan) 
+            : base(Nama, Gaji)
         {
-            Tunjangan = Tunjangan;
+            this.Tunjangan = Tunjangan;
         }
 
         public double HitungGajiTotal()
@@ -52,7 +53,7 @@ namespace SistemKaryawan
         public Kontrak(string Nama, double Gaji, int Durasi)
             : base(Nama, Gaji)
         {
-            Durasi = Durasi;
+            this.Durasi = Durasi;
         }
 
         public void CekKontrak()
@@ -89,12 +90,12 @@ namespace SistemKaryawan
 
         public void KerjakanTugas()
         {
-            Console.WriteLine(nama + " mengerjakan tugas.");
+            Console.WriteLine(Nama + " mengerjakan tugas.");
         }
 
         public override void Kerja()
         {
-            Console.WriteLine(nama + " mengerjakan pekerjaan kantor.");
+            Console.WriteLine(Nama + " mengerjakan pekerjaan kantor.");
         }
     }
 
@@ -107,12 +108,12 @@ class Magang : Kontrak
 
         public void Belajar()
         {
-            Console.WriteLine(nama + " sedang belajar.");
+            Console.WriteLine(Nama + " sedang belajar.");
         }
 
         public override void Kerja()
         {
-            Console.WriteLine(nama + " belajar sambil bekerja.");
+            Console.WriteLine(Nama + " belajar sambil bekerja.");
         }
     }
 
@@ -123,12 +124,12 @@ class Magang : Kontrak
 
         public void AmbilProyek()
         {
-            Console.WriteLine(nama + " mengambil proyek.");
+            Console.WriteLine(Nama + " mengambil proyek.");
         }
 
         public override void Kerja()
         {
-            Console.WriteLine(nama + " mengerjakan proyek sebagai freelancer.");
+            Console.WriteLine(Nama + " mengerjakan proyek sebagai freelancer.");
         }
     }
 
